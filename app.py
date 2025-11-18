@@ -1,7 +1,7 @@
 import streamlit as st
-from utils.audio_to_text import transcribe_audio
-from utils.text_analysis import analyze_text
-from utils.summarization import summarize_interview, generate_feedback
+import transcribe_audio
+import analyze_text
+import summarize_interview, generate_feedback
 
 st.set_page_config(page_title="AI Interview Analyzer", layout="wide")
 st.title("AI Interview Analyzer – Your Personal AI Mentor")
@@ -38,3 +38,4 @@ if st.button("Analyze"):
         st.subheader("Suggested Improvements")
         for item in feedback:
             st.write(f"- {item}")
+
